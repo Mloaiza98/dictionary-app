@@ -57,12 +57,24 @@ export default function Home() {
                   <h3 className="italic text-xl font-semibold mb-4">
                     {meaning.partOfSpeech}
                   </h3>
-                  <p className=" text-gray-600">Meaning</p>
+                  <p
+                    className={`italic ml-6 ${
+                      theme === "light" ? "text-gray-600 " : "text-gray-400"
+                    }`}
+                  >
+                    Meaning
+                  </p>
                   {meaning.definitions.map((def, idx) => (
                     <div key={idx} className="ml-4">
                       <li>{def.definition}</li>
                       {def.example && (
-                        <p className={`italic ml-6 ${theme === "light" ? "text-gray-600 " : "text-gray-300"}`}>
+                        <p
+                          className={`italic ml-6 ${
+                            theme === "light"
+                              ? "text-gray-600 "
+                              : "text-gray-400"
+                          }`}
+                        >
                           "{def.example}"
                         </p>
                       )}
@@ -70,11 +82,23 @@ export default function Home() {
                   ))}
                   {meaning.synonyms.length > 0 && (
                     <>
-                      <p className="italic text-gray-600 ml-6">
+                      <p
+                        className={`italic ml-6 ${
+                          theme === "light" ? "text-gray-600 " : "text-gray-400"
+                        }`}
+                      >
                         Synonyms:
                         {meaning.synonyms.map((syn, idx) => (
                           <div key={idx} className="ml-6">
-                            <ul className=" text-pruple-600 ">{syn}</ul>
+                            <ul
+                              className={`ml-6 ${
+                                theme === "light"
+                                  ? "text-purple-600 "
+                                  : "text-purple-400"
+                              }`}
+                            >
+                              {syn}
+                            </ul>
                           </div>
                         ))}
                       </p>
@@ -82,12 +106,26 @@ export default function Home() {
                   )}
                   {meaning.antonyms.length > 0 && (
                     <>
-                      <p className="italic text-gray-600 ml-6">Antonyms:</p>
-                      {meaning.antonyms.map((ant, idx) => (
-                        <div key={idx} className="ml-4">
-                          <p>Antonyms: {ant}</p>
-                        </div>
-                      ))}
+                      <p
+                        className={`italic ml-6 ${
+                          theme === "light" ? "text-gray-600 " : "text-gray-400"
+                        }`}
+                      >
+                        Antonyms:
+                        {meaning.antonyms.map((ant, idx) => (
+                          <div key={idx} className="ml-6">
+                            <ul
+                              className={`ml-6 ${
+                                theme === "light"
+                                  ? "text-purple-600 "
+                                  : "text-purple-400"
+                              }`}
+                            >
+                              {ant}
+                            </ul>
+                          </div>
+                        ))}
+                      </p>
                     </>
                   )}
                 </div>
