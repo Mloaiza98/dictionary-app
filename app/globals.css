@@ -31,3 +31,25 @@ body {
     text-wrap: balance;
   }
 }
+
+:root.dark {
+  --bg-color: #1a202c;
+  --text-color: #f7fafc;
+}
+
+body.dark {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.sans {
+  font-family: "Helvetica", sans-serif;
+}
+
+body.serif {
+  font-family: "Georgia", serif;
+}
+
+body.mono {
+  font-family: "Courier New", monospace;
+}

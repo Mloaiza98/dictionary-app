@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-export default function Play({ src }) {
+export default function Play({ src, theme }) {
   const audioRef = useRef(null);
 
   const handlePlay = () => {
@@ -14,7 +14,7 @@ export default function Play({ src }) {
     <div>
       <button
         onClick={handlePlay}
-        className="w-12 h-12 rounded-full bg-blue-500 focus:outline-none text-white "
+        className={`w-12 h-12 rounded-full focus:outline-none  ${theme === "light" ? " bg-purple-300" : "bg-purple-900"} ${theme === "light" ? "text-purple-900" : "text-pruple-500"}`}
       >
         ▶
       </button>
